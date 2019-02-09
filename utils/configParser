@@ -1,0 +1,18 @@
+import configparser
+
+
+def getConfigDetails(planetName):
+    config = configparser.ConfigParser()
+    config.read('config.ini')
+    planetConfig = config[planetName]
+    for key in planetConfig:
+        print(key)
+        print(planetConfig[key])
+    return planetConfig
+
+def getFileLocation(planet_name):
+    planet_config = getConfigDetails(planet_name)
+    return planet_config['FileLocation']
+
+if __name__ =='__main__':
+    getFileLocation('EARTH')

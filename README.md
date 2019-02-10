@@ -4,7 +4,7 @@ Partly Cloudy skies on the Earth and Mars
 ## GS@HackTheSolar: Real-Time Weather on Earth and Mars
 
 ### Goal
-To achieve Real-Time Data Visualization on OpenSpace 
+> To achieve Real-Time Data Visualization on OpenSpace 
 
 ### Approach
 Enterprise Solution includes the following:

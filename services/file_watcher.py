@@ -1,18 +1,22 @@
-import time  
+import time
 import sys
-from watchdog.observers import Observer  
-from watchdog.events import PatternMatchingEventHandler 
+from watchdog.observers import Observer
+from watchdog.events import PatternMatchingEventHandler
+from services.app import get_mars_daily_weather
+from services.app import get_earth_daily_weather
 
 #Global PATHS: 
-EARTH_PATH = "EarthPath"  #Update Earth file path here
-MARS_PATH = "MarsPath"  #Update MARS file path here
-PLANET_EARTH = "Earth"
-PLANET_MARS = "Mars"
+EARTH_PATH = "C:/Users/Pointy/Desktop/mars/test"  #Update Earth file path here
+MARS_PATH = "C:/Users/Pointy/Desktop/mars/test"  #Update MARS file path here
+PLANET_EARTH = "EARTH"
+PLANET_MARS = "MARS"
 
 class eventHandler(PatternMatchingEventHandler):
     patterns = ["*.jpg"]
     def process(self, event): 
         print(event.src_path, event.event_type, "\n")
+        get_mars_daily_weather('20180202')
+
 
     def on_created(self, event):
         print("\n*** EVENT DETECTED: CREATE ***")
@@ -20,11 +24,11 @@ class eventHandler(PatternMatchingEventHandler):
 
     def on_deleted(self, event):
         print("\n*** EVENT DETECTED: DELETE ***")
-        self.process(event)
+        #self.process(event)
 
     def on_modified(self, event):
         print("*** EVENT DETECTED: MODIFIED ***")
-        self.process(event)
+        #self.process(event)
 
 class Observe(): 
     def __init__(self, source):

@@ -1,9 +1,9 @@
 from flask import Flask
 
 app = Flask(__name__)
-from services.file_retriever import *
-from utils.config_parser import *
-from services.transfer_data import *
+from file_retriever import *
+from config_parser import *
+from transfer_data import *
 
 
 @app.route('/')

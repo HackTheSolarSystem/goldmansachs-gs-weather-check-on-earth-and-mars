@@ -1,4 +1,4 @@
-# goldmansachs-gs-party_clody-skies-on-the-earth-and-mars
+# goldmansachs-party_clody-skies-on-the-earth-and-mars
 
 # ZEPHYR : GS@HackTheSolar
 

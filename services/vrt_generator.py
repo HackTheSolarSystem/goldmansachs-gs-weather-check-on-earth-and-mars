@@ -1,3 +1,4 @@
+import gdal
 import sys
 import os
 
@@ -25,18 +26,16 @@ def generate_vrt_and_geotiff(input_file,planet,date):
         srs = 'EPSG:4326'
         print("INFO:MARS geo spatial co-ordinates found")
     if(planet=="EARTH"):
-        aullr = '-155.79295349 80.29821777 5.505262509999994 -80.91002823000001'
+        aullr = '-155.79295349 -80.91002823000001 5.505262509999994 80.29821777'
         srs = 'EPSG:4326'
         print("INFO:EARTH geo spatial co-ordinates found")
-    if(planet=="MARS" or planet=="EARTH"):
+    if(planet=="MARS"|planet=="EARTH"):
         print("INFO:Loading input data set " + input_file)
-        gdal_translate_command = "gdal_translate -of GTiff -a_ullr " + aullr + " -a_srs "+srs+" "+input_file + " "+output_geo_file
-        print("INFO: Running Command "+ gdal_translate_command)
-        os.system(gdal_translate_command)
-        print("INFO:Building vrt for generated geo tiff data set at "+output_file_location+file_name+".vrt")
-        gdal_build_vrt_command = "gdalbuildvrt "+ output_file_location+file_name+".vrt"+" "+output_geo_file
-        print("INFO: Running Command :  "+ gdal_build_vrt_command)
-        os.system(gdal_build_vrt_command)
+        ds = gdal.Open(input_file)
+        print("INFO:Translating input data set to geo tiff data set with output bounds " + aullr + " output srs " + srs)
+        gdal.Translate(output_geo_file, ds, format = 'GTiff', outputBounds = aullr, outputSRS = srs)
+        print("INFO:Building vrt for generated geo tiff data set")
+        gdal.BuildVRT(output_file_location+file_name+".vrt",output_geo_file)
         create_info_file(output_file_location, file_name)
         print("INFO:Completed geo tiff, vrt and info files generation")
     else:

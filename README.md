@@ -27,14 +27,11 @@ Image Transformer to GDAL VRT
 * GDAL Virtual Dataset 
 * OpenSpace
 
-### Future Path
+### Next Steps
 * Using Hadoop 
     stores large datasets reliably,
     transforms datasets into georeference images and to global GDAL Virtual datasets
     streams datasets at high bandwidth to OpenSpace GlobeBrowsing Visualization
-      
-### Lessons Learnt
-
       
 ### Contributers
 

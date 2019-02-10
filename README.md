@@ -36,14 +36,14 @@ Image Transformer to GDAL VRT
 ### Lessons Learnt
 
       
-### Contributers
+### Contributors
 
-@gs-engineers 
-@thenu 
-@indu 
-@archana 
-@zahra 
-@shweta 
-Emy Rivera https://github.com/emrivera  
-@vandana 
-@lakshmi
+* @gs-engineers 
+* Thenu https://github.com/mthenu 
+* @indu 
+* Archana https://github.com/archanam90 
+* Zahra https://github.com/zahramahmood 
+* @shweta 
+* Emy https://github.com/emrivera  
+* Vandanah https://github.com/vandanah 
+* Lakshmi Prasanna https://github.com/lethiraj

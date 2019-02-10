@@ -25,14 +25,19 @@ def get_directory(planet_name, date_yyyyMMdd):
     return directory
 
 def get_filename(file_name, date_yyyyMMdd, time_hhmm):
-    if file_name.find('/'):
+    print(file_name)
+    if file_name.find('/') != -1:
         file_name_with_ext = file_name.rsplit('/', 1)[1]
-        file_name = file_name_with_ext[0 : file_name_with_ext.index('.')]
-        return file_name + "_" + date_yyyyMMdd + "_" + time_hhmm
+    else: 
+        file_name_with_ext = file_name
+    file_name = file_name_with_ext[0 : file_name_with_ext.index('.')]
+    return file_name + "_" + date_yyyyMMdd + "_" + time_hhmm
 
 def get_extension(file_path):
     if file_path.find('.'):
         return "." + file_path.rsplit('.', 1)[1]
+    else: 
+        return "."
 
 
 def convert_to_tiff(directory, image_file_name, image_file_extension):
@@ -41,5 +46,5 @@ def convert_to_tiff(directory, image_file_name, image_file_extension):
     img.save(directory + tiff_file_name)
     return tiff_file_name
 
-if __name__ =='__main__':
-    retrieve_from_server('mars', 'https://cdn.pixabay.com/photo/2017/01/03/02/07/vine-1948358_1280.png', 'https://minnlawyer.com/files/2017/04/comma-clipart-clipart-best-frrJZJ-clipart.jpg', '20180202', '0000')
+#if __name__ =='__main__':
+#    retrieve_from_server('mars', 'https://cdn.pixabay.com/photo/2017/01/03/02/07/vine-1948358_1280.png', 'https://minnlawyer.com/files/2017/04/comma-clipart-clipart-best-frrJZJ-clipart.jpg', '20180202', '0000')

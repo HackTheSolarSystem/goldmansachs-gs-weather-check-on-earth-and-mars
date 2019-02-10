@@ -3,12 +3,13 @@ import sys
 import xmltodict
 from watchdog.observers import Observer  
 from watchdog.events import PatternMatchingEventHandler 
+from shared_services import *
 
 
 #Global PATHS: 
 PLANETS = {
-            "PLANET_EARTH" : "EarthPath", 
-            "PLANET_MARS"  : "MarsPath"
+            "PLANET_EARTH" : "ftp://ftp.nnvl.noaa.gov/GOES/ABI_TrueColor/", 
+            "PLANET_MARS"  : "http://localhost:8888/tree/Documents/GoldmanSachs/HackTheSolarSystem/goldmansachs-gs-weather-check-on-earth-and-mars/services/MarsPath"
           }
 PLANET = None
 
@@ -29,6 +30,7 @@ class eventHandler(PatternMatchingEventHandler):
         time = time[:4]
         print(file_name, date, time, "\n")
         # ---> insert code for processing Earth:
+        return(file_name, date, time)
 
     def processMars(self, event): 
         """
@@ -44,21 +46,24 @@ class eventHandler(PatternMatchingEventHandler):
                 file_name = parsed.get("Product_Observational", {}).get("Identification_Area", {}).get("title", {})
                 stop_date_time = parsed.get("Product_Observational", {}).get("Observation_Area", {}).get("Time_Coordinates", {}).get("stop_date_time")
             date, time = stop_date_time.split("T")
+            file_url = PLANETS[PLANET] + "/" + file_name
             date = "".join(date.split("-"))
             time = "".join(time.split(":")[:2])
-            print(file_name, date, time, "\n")
+            print(file_url, date, time, "\n")
             # --->insert code here for processing Mars:
+            get_mars_daily_weather(file_name, date, time)
         else: 
             print("File" + event.src_path + "not in correct XML format. Ignoring.\n")
 
-    def on_created(self, event):
-        print("\n*** EVENT DETECTED: CREATE ***")
-        if PLANET == "PLANET_EARTH": 
-            self.processEarth(event)
-        elif PLANET == "PLANET_MARS":
-            self.processMars(event) 
-        else: 
-            self.process(event)
+    def on_any_event(self, event):
+        if(event.event_type == "created"):
+            print("\n*** EVENT DETECTED: CREATE ***")
+            if PLANET == "PLANET_EARTH": 
+                self.processEarth(event)
+            elif PLANET == "PLANET_MARS":
+                self.processMars(event) 
+            else: 
+                self.process(event)
 
     def on_deleted(self, event):
         print("\n*** EVENT DETECTED: DELETE ***")
@@ -109,7 +114,7 @@ class instantiatePlanet():
         self.setPath()
         Observe(self.PATH, self.planet).run()
 
-if __name__ == '__main__':
-    instantiatePlanet("PLANET_EARTH").run() # Pass planet name here
+#if __name__ == '__main__':
+#    instantiatePlanet("PLANET_EARTH").run() # Pass planet name here
 
 

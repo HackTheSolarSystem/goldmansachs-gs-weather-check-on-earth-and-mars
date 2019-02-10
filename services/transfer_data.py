@@ -15,7 +15,7 @@ def transfer_data(planet_name, files_to_transfer, date_yyyyMMdd):
 		raise Exception('Invalid planet name entered ' + planet_name)
 	planet_name = planet_name.upper()
 	vrt_folder = root + slash + planet_name + slash + date_yyyyMMdd 
-	openspace_destination_folder = 'C:/Users/Pointy/Desktop/'+planet_name.lower()+'/'
+	openspace_destination_folder = '/Users/Zahra/Desktop/'+planet_name.lower()+'/'
 	print('Preparing to move file... ')
 
 	for file_name in files_to_transfer:

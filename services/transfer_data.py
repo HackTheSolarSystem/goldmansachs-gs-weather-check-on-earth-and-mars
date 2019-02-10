@@ -7,8 +7,9 @@ def get_planet_weather_data(file_name, planet_name, date_yyyyMMdd):
 	allowed_planet_names = ['Earth', 'Mars']
 	slash = '/'
 	underscore = '_'
-	root = '/Users/emyrivera/Desktop'
-	origin_folder = '/Users/emyrivera/Desktop/clear_skies'
+
+	root = '../'
+	origin_folder = '../whateverFolderNameItIs'
 
 	if planet_name not in allowed_planet_names: 
 		raise Exception('Invalid planet name entered ' + planet_name)

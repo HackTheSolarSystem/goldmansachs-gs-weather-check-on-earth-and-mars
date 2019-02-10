@@ -1,4 +1,2 @@
 def convertAnyImageToTiff():
     return ''
-
-def

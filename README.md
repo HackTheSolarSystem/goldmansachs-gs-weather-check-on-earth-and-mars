@@ -45,5 +45,5 @@ Image Transformer to GDAL VRT
 * Zahra https://github.com/zahramahmood 
 * Shweta https://github.com/tyagishweta
 * Emy https://github.com/emrivera  
-* Vandanah https://github.com/vandanah 
+* Vandana https://github.com/vandanah 
 * Lakshmi Prasanna https://github.com/lethiraj

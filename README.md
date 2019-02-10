@@ -5,6 +5,7 @@ Partly Cloudy skies on the Earth and Mars
 
 ### Goal
 > To achieve Real-Time Data Visualization on OpenSpace 
+> To provide OnDemand Data Visualization on OpenSpace
 
 ### Approach
 Enterprise Solution includes the following:
@@ -28,14 +29,11 @@ Image Transformer to GDAL VRT
 * OpenSpace
 
 ### Next Steps
-* Using Hadoop - 1. stores large datasets reliably,
-                 1. transforms datasets into georeference images and to global GDAL Virtual datasets
-                 1. streams datasets at high bandwidth to OpenSpace GlobeBrowsing Visualization
-                 
-
-The Hadoop Distributed File System (HDFS) is designed to store very large data sets reliably, and to stream those data sets at high bandwidth to user applications. In a large cluster, thousands of servers both host directly attached storage and execute user application tasks.
-
-
+* Using Hadoop 
+    stores large datasets reliably,
+    transforms datasets into georeference images and to global GDAL Virtual datasets
+    streams datasets at high bandwidth to OpenSpace GlobeBrowsing Visualization
+      
 ### Contributers
 
 @gs-engineers 

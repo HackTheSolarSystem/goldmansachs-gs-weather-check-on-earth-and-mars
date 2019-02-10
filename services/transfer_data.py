@@ -2,24 +2,25 @@ import os
 import shutil
 import sys
 
-def get_planet_weather_data(planet_name, date_yyyyMMdd, time_hhmm, destination_folder):
+def get_planet_weather_data(file_name, planet_name, date_yyyyMMdd):
 	
 	allowed_planet_names = ['Earth', 'Mars']
-	file_ending = '.vrt'
 	slash = '/'
 	underscore = '_'
-
-	#to-do change this
+	root = '/Users/emyrivera/Desktop'
 	origin_folder = '/Users/emyrivera/Desktop/clear_skies'
 
 	if planet_name not in allowed_planet_names: 
 		raise Exception('Invalid planet name entered ' + planet_name)
 
-	file_name = planet_name + underscore + date_yyyyMMdd + underscore + time_hhmm + file_ending
+	destination_folder = root + slash + planet_name + slash + date_yyyyMMdd 
+
+	if not os.path.isdir(destination_folder):
+		os.makedirs(destination_folder)
 
 	print('Preparing to move file... ')
-	shutil.copyfile(origin_folder + slash + file_name, destination_folder + slash + file_name)
-	print('file moved from '+ origin_folder + ' to '+ destination_folder)
+	shutil.copy(origin_folder + slash + file_name, destination_folder)
+	print('File moved from '+ origin_folder + ' to '+ destination_folder)
 
 if __name__ == "__main__":
-   get_planet_weather_data(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+   get_planet_weather_data(sys.argv[1], sys.argv[2], sys.argv[3])

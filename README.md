@@ -1,11 +1,10 @@
-# goldmansachs-gs-weather-check-on-earth-and-mars
-Partly Cloudy skies on the Earth and Mars
+# goldmansachs-party_clody-skies-on-the-earth-and-mars
 
-## GS@HackTheSolar: Real-Time Weather on Earth and Mars
+# ZEPHYR : GS@HackTheSolar
 
 ### Goal
-> To achieve Real-Time Data Visualization on OpenSpace 
-> To provide OnDemand Data Visualization on OpenSpace
+* To achieve Real-Time Data Visualization on OpenSpace 
+* To provide OnDemand Data Visualization on OpenSpace
 
 ### Approach
 Enterprise Solution includes the following:

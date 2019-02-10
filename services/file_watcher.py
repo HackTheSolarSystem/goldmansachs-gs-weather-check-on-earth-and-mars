@@ -9,7 +9,7 @@ from shared_services import *
 #Global PATHS: 
 PLANETS = {
             "PLANET_EARTH" : "EarthPath", 
-            "PLANET_MARS"  : "MarsPath"
+            "PLANET_MARS"  : "/Users/Zahra/Documents/GoldmanSachs/HackTheSolarSystem/goldmansachs-gs-weather-check-on-earth-and-mars/services/MarsPath"
           }
 PLANET = None
 
@@ -51,7 +51,7 @@ class eventHandler(PatternMatchingEventHandler):
             time = "".join(time.split(":")[:2])
             print(file_name, date, time, "\n")
             # --->insert code here for processing Mars:
-            get_mars_daily_weather(file_name, date, time)
+            get_mars_daily_weather(file_url, date, time)
         else: 
             print("File" + event.src_path + "not in correct XML format. Ignoring.\n")
 

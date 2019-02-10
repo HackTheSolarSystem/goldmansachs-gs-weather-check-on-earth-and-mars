@@ -10,10 +10,14 @@ def retrieve_from_server(planet_name, image_file_path, date_yyyyMMdd, time_hhmm)
     image_file_name=get_filename(image_file_path, date_yyyyMMdd, time_hhmm)
     image_file_extension = get_extension(image_file_path)
 
-    copyfile(image_file_path, directory + image_file_name + image_file_extension)
+    print(image_file_path)
+
+    copyfile(image_file_path, directory)
 
     if image_file_extension != ".tiff":
         return convert_to_tiff(directory, image_file_name, image_file_extension)
+    else: 
+        return(image_file_name + image_file_extension)
 
 
 def get_directory(planet_name, date_yyyyMMdd):

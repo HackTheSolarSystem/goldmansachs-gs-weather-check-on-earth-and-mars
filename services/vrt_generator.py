@@ -29,7 +29,7 @@ def generate_vrt_and_geotiff(input_file,planet,date):
         aullr = 
         srs = 
         print("INFO:EARTH geo spatial co-ordinates found")
-    if(planet=="MARS"||planet=="EARTH"):
+    if(planet=="MARS"|planet=="EARTH"):
         print("INFO:Loading input data set " + input_file)
         ds = gdal.Open(input_file)
         print("INFO:Translating input data set to geo tiff data set with output bounds " + aullr + " output srs " + srs)

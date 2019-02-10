@@ -3,8 +3,6 @@ Partly Cloudy skies on the Earth and Mars
 
 # ZEPHYR : GS@HackTheSolar
 
-## Real-Time Weather on Earth and Mars
-
 ### Goal
 > To achieve Real-Time Data Visualization on OpenSpace 
 > To provide OnDemand Data Visualization on OpenSpace

@@ -40,10 +40,10 @@ Image Transformer to GDAL VRT
 
 * @gs-engineers 
 * Thenu https://github.com/mthenu 
-* @indu 
+* Indu https://github.com/indumadu 
 * Archana https://github.com/archanam90 
 * Zahra https://github.com/zahramahmood 
-* @shweta 
+* Shweta https://github.com/tyagishweta
 * Emy https://github.com/emrivera  
 * Vandanah https://github.com/vandanah 
 * Lakshmi Prasanna https://github.com/lethiraj

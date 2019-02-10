@@ -15,23 +15,24 @@ Enterprise Solution includes the following:
 * OnDemand Visualization - Strategic solution for onDemand Visualization 
 
 ### Challenges
-OpenSpace GlobeBrowsing Visualization with new geo.tiff/GDAL datasets
-Image Transformer to GDAL VRT
+* OpenSpace GlobeBrowsing Visualization with patched VRT datasets
+* Image Transformation to VRT using GDAL
 
 ### Tech Stack
 * Python Flask Framework [FLASK]
 * Python Imaging Library [PILLOW]
 * Python URL Libraries [URLLIB]
+* Python GDAL Libraries [OSGEO]
 * Watchdog Observers [WATCHDOG]
 * Python shutil - high-level File Operations [SHUTIL]
 * GDAL Virtual Dataset 
 * OpenSpace
 
 ### Future Path
-* Using Hadoop 
-    stores large datasets reliably,
-    transforms datasets into georeference images and to global GDAL Virtual datasets
-    streams datasets at high bandwidth to OpenSpace GlobeBrowsing Visualization
+Set up a server to handle WMS requests and other requests to retrieve visualizations by planet/date and using Hadoop data clusters to
+* store large datasets reliably either locally or on the cluster,
+* transform datasets into georeference images and then to global GDAL Virtual datasets
+* stream datasets at high bandwidth to OpenSpace GlobeBrowsing Visualization
       
 ### Lessons Learnt
 

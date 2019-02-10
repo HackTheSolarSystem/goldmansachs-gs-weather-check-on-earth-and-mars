@@ -1,0 +1,260 @@
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1700.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model
+href="https://pds.nasa.gov/pds4/cart/v1/PDS4_CART_1700.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"
+?>
+<?xml-model
+href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1700.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"
+?>
+<?xml-model
+href="https://pds.nasa.gov/pds4/sp/v1/PDS4_SP_1100.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"
+?>
+<!--  CIsbell additions  -->
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" xmlns:disp="http://pds.nasa.gov/pds4/disp/v1" xmlns:dph="http://pds.nasa.gov/pds4/dph/v1" xmlns:cart="http://pds.nasa.gov/pds4/cart/v1" xmlns:sp="http://pds.nasa.gov/pds4/sp/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1700.xsd http://pds.nasa.gov/pds4/disp/v1 https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1700.xsd http://pds.nasa.gov/pds4/cart/v1 https://pds.nasa.gov/pds4/cart/v1/PDS4_CART_1700.xsd http://pds.nasa.gov/pds4/sp/v1 https://pds.nasa.gov/pds4/sp/v1/PDS4_SP_1100.xsd http://pds.nasa.gov/pds4/dph/v1 https://pds.nasa.gov/pds4/dph/v1/PDS4_DPH_1700.xsd">
+<Identification_Area>
+<logical_identifier>urn:nasa:pds:wang_marci_pdart:b20:b20_day01_resx2</logical_identifier>
+ <!--
+ pds:logical_identifier must have the form "urn:agencyId:authorityId:bundleID:collectionID:productID"
+-->
+ <!--
+ The value of the attribute logical_identifier must only contain lower-case letters
+-->
+<version_id>2.0</version_id>
+<title>B20_day01_resx2.tiff</title>
+<information_model_version>1.7.0.0</information_model_version>
+ <!--
+ The attribute pds:information_model_version must be equal to the value '1.7.0.0'.
+-->
+<product_class>Product_Observational</product_class>
+ <!--
+ The attribute pds:product_class must be equal to one of the following values 'Product_AIP', 'Product_Ancillary', 'Product_Attribute_Definition', 'Product_Browse', 'Product_Bundle', 'Product_Class_Definition', 'Product_Collection', 'Product_Context', 'Product_DIP', 'Product_DIP_Deep_Archive', 'Product_Data_Set_PDS3', 'Product_Document', 'Product_File_Repository', 'Product_File_Text', 'Product_Instrument_Host_PDS3', 'Product_Instrument_PDS3', 'Product_Mission_PDS3', 'Product_Native', 'Product_Observational', 'Product_Proxy_PDS3', 'Product_SIP', 'Product_SIP_Deep_Archive', 'Product_SPICE_Kernel', 'Product_Service', 'Product_Software', 'Product_Subscription_PDS3', 'Product_Target_PDS3', 'Product_Thumbnail', 'Product_Update', 'Product_Volume_PDS3', 'Product_Volume_Set_PDS3', 'Product_XML_Schema', 'Product_Zipped'.
+-->
+</Identification_Area>
+<Observation_Area>
+<Time_Coordinates>
+ <!--
+ This data product includes images acquired over a range of time
+-->
+<start_date_time>2010-04-01T01:46:21.890Z</start_date_time>
+<stop_date_time>2010-04-02T00:13:00.018Z</stop_date_time>
+ <!--
+ ASCII_Date_Time_YMD_UTC - nillable using "inapplicable", "anticipated", "missing", "unknown"
+-->
+</Time_Coordinates>
+<Primary_Result_Summary>
+<purpose>Science</purpose>
+<processing_level>Derived</processing_level>
+<description>MRO MARCI Daily Global Mosaic</description>
+</Primary_Result_Summary>
+<Investigation_Area>
+<name>Wang_MARCI_PDART</name>
+<type>Individual Investigation</type>
+ <!--
+ The attribute pds:type must be equal to one of the following values 'Individual Investigation', 'Mission', 'Observing Campaign', 'Other Investigation'. Individual Investigation
+-->
+<Internal_Reference>
+<lid_reference>urn:nasa:pds:wang_marci_pdart</lid_reference>
+<reference_type>data_to_investigation</reference_type>
+ <!--
+ The attribute reference_type must be set to one of the following values 'data_to_investigation'.
+-->
+</Internal_Reference>
+</Investigation_Area>
+<Observing_System>
+<Observing_System_Component>
+<name>Mars Reconnaissance Orbiter</name>
+<type>Spacecraft</type>
+<Internal_Reference>
+<lid_reference>
+urn:nasa:pds:context:instrument_host:spacecraft.mro
+</lid_reference>
+<reference_type>is_instrument_host</reference_type>
+</Internal_Reference>
+</Observing_System_Component>
+<Observing_System_Component>
+<name>MARCI</name>
+<type>Instrument</type>
+<Internal_Reference>
+<lid_reference>urn:nasa:pds:context:instrument:marci.mro</lid_reference>
+<reference_type>is_instrument</reference_type>
+</Internal_Reference>
+</Observing_System_Component>
+</Observing_System>
+<Target_Identification>
+<name>Mars</name>
+<type>Planet</type>
+<Internal_Reference>
+<lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+<reference_type>data_to_target</reference_type>
+</Internal_Reference>
+ <!--
+ The attribute pds:type must be equal to one of the following values 'Asteroid', 'Calibration', 'Calibration Field', 'Calibrator', 'Comet', 'Dust', 'Dwarf Planet', 'Equipment', 'Exoplanet System', 'Galaxy', 'Globular Cluster', 'Lunar Sample', 'Meteorite', 'Meteoroid', 'Meteoroid Stream', 'Nebula', 'Open Cluster', 'Planet', 'Planetary Nebula', 'Planetary System', 'Plasma Cloud', 'Plasma Stream', 'Ring', 'Satellite', 'Star', 'Star Cluster', 'Sun', 'Synthetic Sample', 'Terrestrial Sample', 'Trans-Neptunian Object'.
+-->
+</Target_Identification>
+<Discipline_Area>
+<cart:Cartography>
+<cart:Spatial_Domain>
+<cart:Bounding_Coordinates>
+<cart:west_bounding_coordinate unit="deg">-180.0</cart:west_bounding_coordinate>
+<cart:east_bounding_coordinate unit="deg">180.0</cart:east_bounding_coordinate>
+<cart:north_bounding_coordinate unit="deg">90.0</cart:north_bounding_coordinate>
+<cart:south_bounding_coordinate unit="deg">-90.0</cart:south_bounding_coordinate>
+</cart:Bounding_Coordinates>
+</cart:Spatial_Domain>
+<cart:Spatial_Reference_Information>
+<cart:Horizontal_Coordinate_System_Definition>
+<cart:Planar>
+<cart:Map_Projection>
+<cart:map_projection_name>Equirectangular</cart:map_projection_name>
+<cart:Equirectangular>
+<cart:longitude_of_central_meridian unit="deg">0</cart:longitude_of_central_meridian>
+<cart:latitude_of_projection_origin unit="deg">0</cart:latitude_of_projection_origin>
+</cart:Equirectangular>
+</cart:Map_Projection>
+<cart:Planar_Coordinate_Information>
+<cart:planar_coordinate_encoding_method>Coordinate Pair</cart:planar_coordinate_encoding_method>
+<cart:Coordinate_Representation>
+<cart:pixel_resolution_x unit="m/pixel">2963.735</cart:pixel_resolution_x>
+<cart:pixel_resolution_y unit="m/pixel">2963.735</cart:pixel_resolution_y>
+<cart:pixel_scale_x unit="pixel/deg">20.0</cart:pixel_scale_x>
+<cart:pixel_scale_y unit="pixel/deg">20.0</cart:pixel_scale_y>
+</cart:Coordinate_Representation>
+</cart:Planar_Coordinate_Information>
+<cart:Geo_Transformation>
+<cart:upperleft_corner_x unit="m">-10669445.55</cart:upperleft_corner_x>
+<cart:upperleft_corner_y unit="m">5336204.87</cart:upperleft_corner_y>
+</cart:Geo_Transformation>
+</cart:Planar>
+<cart:Geodetic_Model>
+<cart:latitude_type>Planetocentric</cart:latitude_type>
+<cart:semi_major_radius unit="km">3396.19</cart:semi_major_radius>
+<cart:semi_minor_radius unit="km">3396.19</cart:semi_minor_radius>
+<cart:polar_radius unit="km">3376.2</cart:polar_radius>
+<cart:longitude_direction>East_Positive</cart:longitude_direction>
+</cart:Geodetic_Model>
+</cart:Horizontal_Coordinate_System_Definition>
+</cart:Spatial_Reference_Information>
+</cart:Cartography>
+<sp:Axis_Bin_Set>
+<sp:Local_Internal_Reference>
+<sp:local_identifier_reference>band</sp:local_identifier_reference>
+<sp:local_reference_type>spectral_characteristics_to_array_axis</sp:local_reference_type>
+</sp:Local_Internal_Reference>
+<sp:Bin>
+<sp:bin_sequence_number>1</sp:bin_sequence_number>
+<sp:center_value unit="nm">653</sp:center_value>
+<sp:bin_width unit="nm">42</sp:bin_width>
+<sp:Filter>
+<sp:filter_name>red</sp:filter_name>
+</sp:Filter>
+</sp:Bin>
+<sp:Bin>
+<sp:bin_sequence_number>2</sp:bin_sequence_number>
+<sp:center_value unit="nm">546</sp:center_value>
+<sp:bin_width unit="nm">40</sp:bin_width>
+<sp:Filter>
+<sp:filter_name>green</sp:filter_name>
+</sp:Filter>
+</sp:Bin>
+<sp:Bin>
+<sp:bin_sequence_number>3</sp:bin_sequence_number>
+<sp:center_value unit="nm">437</sp:center_value>
+<sp:bin_width unit="nm">32</sp:bin_width>
+<sp:Filter>
+<sp:filter_name>blue</sp:filter_name>
+</sp:Filter>
+</sp:Bin>
+</sp:Axis_Bin_Set>
+<disp:Display_Settings>
+<Local_Internal_Reference>
+<local_identifier_reference>wang_marci_pdart</local_identifier_reference>
+<local_reference_type>display_settings_to_array</local_reference_type>
+</Local_Internal_Reference>
+<disp:Display_Direction>
+<disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+<disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+<disp:vertical_display_axis>Line</disp:vertical_display_axis>
+<disp:vertical_display_direction>Bottom to Top</disp:vertical_display_direction>
+</disp:Display_Direction>
+<disp:Color_Display_Settings>
+<disp:color_display_axis>band</disp:color_display_axis>
+<disp:red_channel_band>3</disp:red_channel_band>
+<disp:green_channel_band>2</disp:green_channel_band>
+<disp:blue_channel_band>1</disp:blue_channel_band>
+</disp:Color_Display_Settings>
+</disp:Display_Settings>
+</Discipline_Area>
+</Observation_Area>
+<File_Area_Observational>
+<File>
+<file_name>B20_day01_resx2.tiff</file_name>
+</File>
+<Array_3D>
+<name>B20_day01_resx2.tiff</name>
+<local_identifier>wang_marci_pdart</local_identifier>
+<offset unit="byte">22016</offset>
+<axes>3</axes>
+<axis_index_order>Last Index Fastest</axis_index_order>
+<Element_Array>
+<data_type>UnsignedByte</data_type>
+ <!--
+ The attribute pds:data_type must be equal to one of the following values 'ComplexLSB16', 'ComplexLSB8', 'ComplexMSB16', 'ComplexMSB8', 'IEEE754LSBDouble', 'IEEE754LSBSingle', 'IEEE754MSBDouble', 'IEEE754MSBSingle', 'SignedBitString', 'SignedByte', 'SignedLSB2', 'SignedLSB4', 'SignedLSB8', 'SignedMSB2', 'SignedMSB4', 'SignedMSB8', 'UnsignedBitString', 'UnsignedByte', 'UnsignedLSB2', 'UnsignedLSB4', 'UnsignedLSB8', 'UnsignedMSB2', 'UnsignedMSB4', 'UnsignedMSB8'.
+-->
+</Element_Array>
+<Axis_Array>
+<axis_name>band</axis_name>
+ <!--
+ The name of the third axis of an Array_3D must be set to band.
+-->
+<elements>3</elements>
+<sequence_number>1</sequence_number>
+ <!--
+ The sequence number of the third axis of an Array_3D must be set to 3.
+-->
+</Axis_Array>
+<Axis_Array>
+<axis_name>Line</axis_name>
+ <!--
+ The name of the first axis of an Array_3D must be set to either Line or Sample.
+-->
+<elements>3601</elements>
+<sequence_number>2</sequence_number>
+ <!--
+ The sequence number of the first axis of an Array_3D must be set to 1.
+-->
+</Axis_Array>
+<Axis_Array>
+<axis_name>Sample</axis_name>
+ <!--
+ The name of the second axis of an Array_3D must be set to either Line or Sample.
+-->
+<elements>7200</elements>
+<sequence_number>3</sequence_number>
+ <!--
+ The sequence number of the second axis of an Array_3D must be set to 2.
+-->
+</Axis_Array>
+</Array_3D>
+</File_Area_Observational>
+<File_Area_Observational_Supplemental>
+<File>
+<file_name>../../index/color/B20_day01.list</file_name>
+</File>
+<Stream_Text>
+<offset unit="byte">0</offset>
+<parsing_standard_id>UTF-8 Text</parsing_standard_id>
+<description>
+List of the Mars Year and approximate Solar Longitude for this mosaic
+</description>
+ <!--
+ The attribute pds:parsing_standard_id must be equal to one of the following values '7-Bit ASCII Text', 'UTF-8 Text'.
+-->
+<record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+ <!--
+ The attribute pds:record_delimiter must be equal to one of the following values 'Carriage-Return Line-Feed', 'carriage-return line-feed'.
+-->
+</Stream_Text>
+</File_Area_Observational_Supplemental>
+</Product_Observational>

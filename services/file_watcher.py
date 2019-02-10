@@ -1,42 +1,41 @@
-import time
+import time  
 import sys
-from watchdog.observers import Observer
-from watchdog.events import PatternMatchingEventHandler
-from services.app import get_mars_daily_weather
-from services.app import get_earth_daily_weather
+from watchdog.observers import Observer  
+from watchdog.events import PatternMatchingEventHandler 
 
 #Global PATHS: 
-EARTH_PATH = "C:/Users/Pointy/Desktop/mars/test"  #Update Earth file path here
-MARS_PATH = "C:/Users/Pointy/Desktop/mars/test"  #Update MARS file path here
-PLANET_EARTH = "EARTH"
-PLANET_MARS = "MARS"
+PLANETS = {
+            "PLANET_EARTH" : "EarthPath", 
+            "PLANET_MARS"  : "MarsPath"
+          }
+PLANET = None
 
 class eventHandler(PatternMatchingEventHandler):
     patterns = ["*.jpg"]
     def process(self, event): 
         print(event.src_path, event.event_type, "\n")
-        get_mars_daily_weather('20180202')
-
 
     def on_created(self, event):
         print("\n*** EVENT DETECTED: CREATE ***")
+        print(PLANET)
         self.process(event)
 
     def on_deleted(self, event):
         print("\n*** EVENT DETECTED: DELETE ***")
-        #self.process(event)
+        self.process(event)
 
     def on_modified(self, event):
         print("*** EVENT DETECTED: MODIFIED ***")
-        #self.process(event)
+        self.process(event)
 
 class Observe(): 
-    def __init__(self, source):
+    def __init__(self, source, planet):
         self.observer = Observer()
         self.PATH = source
         self.eventHandler = eventHandler()
+        global PLANET
+        PLANET = planet
         
-
     def run(self):
         self.start()
         try:
@@ -58,23 +57,19 @@ class Observe():
 class instantiatePlanet(): 
     def __init__(self, planet): 
         self.planet = planet
-        self.MARS = MARS_PATH
-        self.EARTH = EARTH_PATH
         self.PATH = None
 
     def setPath(self): 
-        if self.planet == PLANET_EARTH:
-            self.PATH = self.EARTH
-        elif self.planet == PLANET_MARS: 
-            self.PATH = self.MARS 
+        if self.planet in PLANETS: 
+            self.PATH = PLANETS[self.planet]
         else: 
-            print("Not a valid planet: [Earth, Mars]")
+            print("Planet not supported. Please enter one of: ", PLANETS.keys())
 
     def run(self): 
         self.setPath()
-        Observe(self.PATH).run()
+        Observe(self.PATH, self.planet).run()
 
 if __name__ == '__main__':
-    instantiatePlanet(PLANET_EARTH).run() # Pass planet name here
+    instantiatePlanet("PLANET_MARS").run() # Pass planet name here
 
 

@@ -44,4 +44,4 @@ def convert_to_tiff(directory, image_file_name, image_file_extension):
     img.save(directory + image_file_name + ".tiff")
 
 if __name__ =='__main__':
-    retrieve_from_server('mars', 'https://minnlawyer.com/files/2017/04/comma-clipart-clipart-best-frrJZJ-clipart.jpg', 'https://cdn.pixabay.com/photo/2017/01/03/02/07/vine-1948358_1280.png', '20180202', '0000')
+    retrieve_from_server('mars', 'https://cdn.pixabay.com/photo/2017/01/03/02/07/vine-1948358_1280.png', 'https://minnlawyer.com/files/2017/04/comma-clipart-clipart-best-frrJZJ-clipart.jpg', '20180202', '0000')

@@ -2,7 +2,7 @@ import os
 import shutil
 import sys
 
-def get_planet_weather_data(file_name, planet_name, date_yyyyMMdd):
+def transfer_data(planet_name, vrt_file_name, date_yyyyMMdd):
 	
 	allowed_planet_names = ['Earth', 'Mars']
 	slash = '/'
@@ -21,8 +21,8 @@ def get_planet_weather_data(file_name, planet_name, date_yyyyMMdd):
 		os.makedirs(destination_folder)
 
 	print('Preparing to move file... ')
-	shutil.copy(origin_folder + slash + file_name, destination_folder)
+	shutil.copy(origin_folder + slash + vrt_file_name, destination_folder)
 	print('File moved from '+ origin_folder + ' to '+ destination_folder)
 
 if __name__ == "__main__":
-   get_planet_weather_data(sys.argv[1], sys.argv[2], sys.argv[3])
+   transfer_data(sys.argv[1], sys.argv[2], sys.argv[3])

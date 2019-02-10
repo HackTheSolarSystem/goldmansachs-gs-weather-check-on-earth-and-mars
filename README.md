@@ -44,6 +44,6 @@ Image Transformer to GDAL VRT
 @archana 
 @zahra 
 @shweta 
-@emy 
+Emy Rivera https://github.com/emrivera  
 @vandana 
 @lakshmi

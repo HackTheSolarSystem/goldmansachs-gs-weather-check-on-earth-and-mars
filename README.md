@@ -4,8 +4,8 @@ Partly Cloudy skies on the Earth and Mars
 # ZEPHYR : GS@HackTheSolar
 
 ### Goal
-> To achieve Real-Time Data Visualization on OpenSpace 
-> To provide OnDemand Data Visualization on OpenSpace
+* To achieve Real-Time Data Visualization on OpenSpace 
+* To provide OnDemand Data Visualization on OpenSpace
 
 ### Approach
 Enterprise Solution includes the following:

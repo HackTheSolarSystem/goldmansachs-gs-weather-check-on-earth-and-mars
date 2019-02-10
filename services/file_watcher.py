@@ -8,8 +8,8 @@ from shared_services import *
 
 #Global PATHS: 
 PLANETS = {
-            "PLANET_EARTH" : "ftp://ftp.nnvl.noaa.gov/GOES/ABI_TrueColor/", 
-            "PLANET_MARS"  : "http://localhost:8888/tree/Documents/GoldmanSachs/HackTheSolarSystem/goldmansachs-gs-weather-check-on-earth-and-mars/services/MarsPath"
+            "PLANET_EARTH" : "EarthPath", 
+            "PLANET_MARS"  : "MarsPath"
           }
 PLANET = None
 
@@ -49,21 +49,20 @@ class eventHandler(PatternMatchingEventHandler):
             file_url = PLANETS[PLANET] + "/" + file_name
             date = "".join(date.split("-"))
             time = "".join(time.split(":")[:2])
-            print(file_url, date, time, "\n")
+            print(file_name, date, time, "\n")
             # --->insert code here for processing Mars:
             get_mars_daily_weather(file_name, date, time)
         else: 
             print("File" + event.src_path + "not in correct XML format. Ignoring.\n")
 
-    def on_any_event(self, event):
-        if(event.event_type == "created"):
-            print("\n*** EVENT DETECTED: CREATE ***")
-            if PLANET == "PLANET_EARTH": 
-                self.processEarth(event)
-            elif PLANET == "PLANET_MARS":
-                self.processMars(event) 
-            else: 
-                self.process(event)
+    def on_created(self, event):
+        print("\n*** EVENT DETECTED: CREATE ***")
+        if PLANET == "PLANET_EARTH": 
+            self.processEarth(event)
+        elif PLANET == "PLANET_MARS":
+            self.processMars(event) 
+        else: 
+            self.process(event)
 
     def on_deleted(self, event):
         print("\n*** EVENT DETECTED: DELETE ***")

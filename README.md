@@ -1,4 +1,4 @@
-# goldmansachs-party_clody-skies-on-the-earth-and-mars
+# goldmansachs-partly-clody-skies-on-the-earth-and-mars
 
 # ZEPHYR : GS@HackTheSolar
 
@@ -27,11 +27,14 @@ Image Transformer to GDAL VRT
 * GDAL Virtual Dataset 
 * OpenSpace
 
-### Next Steps
+### Future Path
 * Using Hadoop 
     stores large datasets reliably,
     transforms datasets into georeference images and to global GDAL Virtual datasets
     streams datasets at high bandwidth to OpenSpace GlobeBrowsing Visualization
+      
+### Lessons Learnt
+
       
 ### Contributers
 

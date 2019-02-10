@@ -1,5 +1,4 @@
-# goldmansachs-gs-weather-check-on-earth-and-mars
-Partly Cloudy skies on the Earth and Mars
+# goldmansachs-gs-party_clody-skies-on-the-earth-and-mars
 
 # ZEPHYR : GS@HackTheSolar
 

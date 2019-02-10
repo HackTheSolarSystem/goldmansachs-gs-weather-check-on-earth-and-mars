@@ -4,7 +4,7 @@ import sys
 
 def get_planet_weather_data(file_name, planet_name, date_yyyyMMdd):
 	
-	allowed_planet_names = ['Earth', 'Mars']
+	allowed_planet_names = ['EARTH', 'MARS']
 	slash = '/'
 	underscore = '_'
 

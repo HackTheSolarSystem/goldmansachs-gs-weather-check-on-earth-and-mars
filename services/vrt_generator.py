@@ -26,8 +26,8 @@ def generate_vrt_and_geotiff(input_file,planet,date):
         srs = 'EPSG:4326'
         print("INFO:MARS geo spatial co-ordinates found")
     if(planet=="EARTH"):
-        aullr = 
-        srs = 
+        aullr = ''
+        srs = ''
         print("INFO:EARTH geo spatial co-ordinates found")
     if(planet=="MARS"|planet=="EARTH"):
         print("INFO:Loading input data set " + input_file)

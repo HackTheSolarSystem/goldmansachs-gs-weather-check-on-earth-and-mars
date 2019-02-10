@@ -15,8 +15,8 @@ End-to-End Solution includes the following:
 * OnDemand Visualization - Strategic solution for onDemand Visualization 
 
 ### Challenges
-OpenSpace GlobeBrowsing Visualization with new geo.tiff/GDAL datasets
-Image Transformation to GDAL VRT
+* OpenSpace GlobeBrowsing Visualization with new geo.tiff/GDAL datasets
+* Image Transformation to GDAL VRT
 
 ### Tech Stack
 * Python Flask Framework [FLASK]

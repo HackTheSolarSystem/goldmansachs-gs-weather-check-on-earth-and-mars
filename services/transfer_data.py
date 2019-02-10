@@ -8,6 +8,7 @@ def get_planet_weather_data(file_name, planet_name, date_yyyyMMdd):
 	slash = '/'
 	underscore = '_'
 
+	#TODO make sure we match this with what we have
 	root = '../'
 	origin_folder = '../whateverFolderNameItIs'
 
